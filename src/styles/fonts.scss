@@ -1,0 +1,43 @@
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('*'), url('/public/fonts/Open_Sans/OpenSans-Bold.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: local('*'), url('/public/fonts/Open_Sans/OpenSans-Medium.ttf') format('truetype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('*'), url('/public/fonts/Open_Sans/OpenSans-Regular.ttf') format('truetype');
+}
+
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 700;
+	src: local('*'), url('/public/fonts/Noto_Sans_KR/NotoSansKR-Bold.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 500;
+	src: local('*'), url('/public/fonts/Noto_Sans_KR/NotoSansKR-Medium.otf') format('opentype');
+}
+@font-face {
+	font-family: 'Open Sans';
+	font-style: normal;
+	font-weight: 400;
+	src: local('*'), url('/public/fonts/Noto_Sans_KR/NotoSansKR-Regular.otf') format('opentype');
+}
+
+@font-face {
+	font-family: 'PusKul';
+	font-style: normal;
+	src: local('*'), url('/public/fonts/North_Font/North_PusKul.ttf') format('truetype');
+}

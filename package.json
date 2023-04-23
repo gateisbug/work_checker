@@ -1,22 +1,32 @@
 {
-  "name": "comrade",
+  "name": "work_checker",
   "private": true,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
+    "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "recoil": "^0.7.7",
+    "sass": "^1.62.0",
+    "uuid": "^9.0.0"
   },
   "devDependencies": {
+    "@types/classnames": "^2.3.1",
+    "@types/lodash": "^4.14.194",
+    "@types/node": "^18.15.13",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
+    "@types/uuid": "^9.0.1",
     "@vitejs/plugin-react": "^3.1.0",
+    "classnames": "^2.3.2",
     "typescript": "^4.9.3",
     "vite": "^4.1.0"
-  }
+  },
+  "license": "MIT"
 }
