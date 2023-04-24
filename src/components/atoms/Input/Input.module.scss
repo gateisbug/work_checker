@@ -1,0 +1,78 @@
+@import "src/styles/common";
+
+.input-container {
+	display: flex;
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.4375em;
+	letter-spacing: 0.00938em;
+	color: var(--color-on-background);
+	box-sizing: border-box;
+	align-items: center;
+	position: relative;
+
+	&.none {
+		& > .input-box {
+			&:hover, &:focus-within {
+				background-color: rgba(173, 198, 255, 0.08);
+			}
+		}
+	}
+	&.outline {
+		& > .input-box {
+			outline: 1px solid var(--color-outline);
+
+			&:hover {
+				outline-color: var(--color-on-background);
+			}
+			&:focus-within {
+				outline-color: var(--color-primary);
+			}
+		}
+	}
+}
+
+.input-box {
+	display: block;
+	font: inherit;
+	letter-spacing: inherit;
+	color: currentColor;
+	border: 0;
+	outline: 0;
+	box-sizing: border-box;
+	min-width: 0;
+	width: 100%;
+	border-radius: 4px;
+	cursor: text;
+	transition: transition(outline-color), transition(background-color);
+}
+
+.input-core {
+	display: block;
+	font: inherit;
+	letter-spacing: inherit;
+	color: currentColor;
+	border: 0;
+	outline: 0;
+	box-sizing: content-box;
+	background: none;
+	margin: 0;
+	padding: 0;
+	-webkit-tap-highlight-color: transparent;
+	width: 100%;
+
+	&::placeholder {
+		color: var(--color-secondary-container);
+	}
+}
+
+// lang
+.ko {
+	font-family: 'Noto Sans', sans-serif;
+}
+.en {
+	font-family: 'Open Sans', sans-serif;
+}
+.kp {
+	font-family: 'PusKul', serif;
+}

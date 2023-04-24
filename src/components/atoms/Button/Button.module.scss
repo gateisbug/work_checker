@@ -1,0 +1,106 @@
+@import "src/styles/common";
+
+.button-container {
+	display: inline-flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: center;
+	box-sizing: border-box;
+	position: relative;
+	outline: 0;
+	border: 0;
+	margin: 0;
+	cursor: pointer;
+	user-select: none;
+	vertical-align: middle;
+	appearance: none;
+	text-decoration: none;
+	text-transform: uppercase;
+	min-width: 64px;
+	border-radius: 4px;
+	transition: transition(background-color), transition(outline-color), transition(color);
+
+	&.text {
+		padding: 6px 8px;
+		background-color: transparent;
+
+		&:hover {
+			background-color: rgba(173, 198, 255, 0.08);
+		}
+
+		&.primary {
+			color: var(--color-primary);
+		}
+		&.secondary {
+			color: var(--color-secondary);
+		}
+		&.tertiary {
+			color: var(--color-tertiary);
+		}
+		&.custom {
+			color: inherit;
+		}
+	}
+
+	&.contain {
+		padding: 6px 16px;
+
+		&.primary {
+			background-color: var(--color-primary);
+			color: var(--color-on-primary);
+
+			&:hover {
+				background-color: var(--color-primary-container);
+				color: var(--color-on-primary-container);
+			}
+		}
+		&.secondary {
+			background-color: var(--color-secondary);
+			color: var(--color-on-secondary);
+
+			&:hover {
+				background-color: var(--color-secondary-container);
+				color: var(--color-on-secondary-container);
+			}
+		}
+		&.tertiary {
+			background-color: var(--color-tertiary);
+			color: var(--color-on-tertiary);
+
+			&:hover {
+				background-color: var(--color-tertiary-container);
+				color: var(--color-on-tertiary-container);
+			}
+		}
+		&.custom {
+			background-color: inherit;
+			color: inherit;
+		}
+	}
+
+	&.outline {
+		padding: 5px 15px;
+		background-color: transparent;
+
+		&:hover {
+			background-color: rgba(173, 198, 255, 0.08);
+		}
+
+		&.primary {
+			color: var(--color-primary);
+			outline: 1px solid var(--color-primary);
+		}
+		&.secondary {
+			color: var(--color-secondary);
+			outline: 1px solid var(--color-secondary);
+		}
+		&.tertiary {
+			color: var(--color-tertiary);
+			outline: 1px solid var(--color-tertiary);
+		}
+		&.custom {
+			color: inherit;
+			outline: 1px solid inherit;
+		}
+	}
+}

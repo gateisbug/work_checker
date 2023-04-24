@@ -2,20 +2,26 @@ import { ChangeEvent, useEffect, useState } from 'react';
 import classnames from 'classnames/bind';
 import styles from './Input.module.scss';
 import { v4 as uuidv4 } from 'uuid';
+import { useTranslation } from "react-i18next";
 
 const cx = classnames.bind(styles);
 
 type Props = {
   value: string;
   onChange: (value: string) => void;
+  padding?: string;
+  placeholder?: string;
+  variant?: 'outline'|'none';
 }
 
-function Input(props:Props) {
-  const [uuid, setUuid] = useState<string|undefined>(undefined);
-  const [state, setState] = useState<string>('');
+function Input({ value, onChange, variant='none', placeholder, padding='8px 16px' }:Props) {
+  const { i18n } = useTranslation();
 
-  const onChange = (e:ChangeEvent<HTMLInputElement>) => {
-    props.onChange(e.target.value);
+  const [uuid, setUuid] = useState<string|undefined>(undefined);
+  const [state, setState] = useState<string>(value ?? '');
+
+  const onInput = (e:ChangeEvent<HTMLInputElement>) => {
+    setState(e.target.value);
   }
 
   useEffect(() => {
@@ -23,13 +29,19 @@ function Input(props:Props) {
   }, [])
 
   useEffect(() => {
-    setState(props.value);
-  }, [props.value])
+    setState(value ?? '');
+  }, [value])
 
     return (
-      <div className={ cx("input-container") }>
-        <label htmlFor={uuid} className={ cx("input-box") }>
-          <input id={uuid} type="text" className={ cx("input-core") } onChange={onChange} value={state}/>
+      <div className={ cx("input-container", variant, i18n.language) }>
+        <label htmlFor={uuid} className={ cx("input-box") } style={{ padding }}>
+          <input id={uuid}
+                 type="text"
+                 className={ cx("input-core") }
+                 onInput={onInput}
+                 onChange={(e) => onChange(e.target.value)}
+                 value={state}
+                 placeholder={placeholder}/>
         </label>
       </div>
     )

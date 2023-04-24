@@ -1,0 +1,1 @@
+export type ColorSet = 'primary' | 'secondary' | 'tertiary' | 'custom';

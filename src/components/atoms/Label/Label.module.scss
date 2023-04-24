@@ -1,0 +1,95 @@
+.label-box {
+	display: inline-flex;
+	user-select: none;
+	color: inherit;
+
+	&.useSelect {
+		user-select: text;
+	}
+}
+
+// lang
+.ko {
+	font-family: 'Noto Sans', sans-serif;
+}
+.en {
+	font-family: 'Open Sans', sans-serif;
+}
+.kp {
+	font-family: 'PusKul', serif;
+}
+
+// typo
+.h1 {
+	font-weight: 700;
+	font-size: 6rem;
+	line-height: 1.167;
+	letter-spacing: -0.01562em;
+}
+.h2 {
+	font-weight: 700;
+	font-size: 3.75rem;
+	line-height: 1.2;
+	letter-spacing: -0.00833em;
+}
+.h3 {
+	font-weight: 700;
+	font-size: 3rem;
+	line-height: 1.167;
+	letter-spacing: 0;
+}
+.h4 {
+	font-weight: 700;
+	font-size: 2.2125rem;
+	line-height: 1.235;
+	letter-spacing: 0.00735em;
+}
+.h5 {
+	font-weight: 700;
+	font-size: 1.5rem;
+	line-height: 1.334;
+	letter-spacing: 0;
+}
+.h6 {
+	font-weight: 700;
+	font-size: 1.25rem;
+	line-height: 1.6;
+	letter-spacing: 0.0075em;
+}
+.s1 {
+	font-weight: 500;
+	font-size: 1rem;
+	line-height: 1.75;
+	letter-spacing: 0.00938em;
+}
+.s2 {
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.57;
+	letter-spacing: 0.00714em;
+}
+.b1 {
+	font-weight: 400;
+	font-size: 1rem;
+	line-height: 1.5;
+	letter-spacing: 0.00938em;
+}
+.b2 {
+	font-weight: 400;
+	font-size: 0.875rem;
+	line-height: 1.43;
+	letter-spacing: 0.01071em;
+}
+.btn {
+	font-weight: 500;
+	font-size: 0.875rem;
+	line-height: 1.75;
+	letter-spacing: 0.02857em;
+	text-transform: uppercase;
+}
+.cap {
+	font-weight: 400;
+	font-size: 0.75rem;
+	line-height: 1.66;
+	letter-spacing: 0.03333em;
+}
