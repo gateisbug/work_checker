@@ -5,7 +5,7 @@ import { Input } from "@components/atoms";
 import { useState } from "react";
 
 function App() {
-  const [value, setValue] = useState('');
+  const [value, setValue] = useState('혁명적');
 
   const onClick = (lng: string) => {
     i18next.changeLanguage(lng);
@@ -19,7 +19,7 @@ function App() {
       <Button variant='outline' onClick={() => onClick('en')}>EN</Button>
       <Button onClick={() => onClick('kp')}>KP</Button>
       <Label>{ t('test') }</Label>
-      <Input variant='none' value={value} onChange={(v) => setValue(v)} />
+      <Input variant='outline' value={value} onChange={(v) => setValue(v)} placeholder='placeholder' />
     </div>
   )
 }
