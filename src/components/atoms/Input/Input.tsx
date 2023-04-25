@@ -1,4 +1,4 @@
-import { ChangeEvent, useEffect, useState } from 'react';
+import { ChangeEvent, CSSProperties, useEffect, useState } from 'react';
 import classnames from 'classnames/bind';
 import styles from './Input.module.scss';
 import { v4 as uuidv4 } from 'uuid';
@@ -12,9 +12,10 @@ type Props = {
   padding?: string;
   placeholder?: string;
   variant?: 'outline'|'none';
+  style?: CSSProperties;
 }
 
-function Input({ value, onChange, variant='none', placeholder, padding='8px 16px' }:Props) {
+function Input({ value, onChange, variant='none', placeholder, padding='8px 16px', style=undefined }:Props) {
   const { i18n } = useTranslation();
 
   const [uuid, setUuid] = useState<string|undefined>(undefined);
@@ -33,7 +34,7 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
   }, [value])
 
     return (
-      <div className={ cx("input-container", variant, i18n.language) }>
+      <div className={ cx("input-container", variant, i18n.language) } style={style}>
         <label htmlFor={uuid} className={ cx("input-box") } style={{ padding }}>
           <input id={uuid}
                  type="text"

@@ -1,4 +1,4 @@
-import { ReactNode, useEffect, useState } from 'react';
+import { CSSProperties, ReactNode, useEffect, useState } from 'react';
 import { ColorSet } from "@components/types";
 import Label from "@components/atoms/Label";
 import classnames from 'classnames/bind';
@@ -13,13 +13,15 @@ type Props = {
   onClick?: () => void;
   colorSet?: ColorSet;
   variant?: Variant;
+  style?: CSSProperties;
 }
 
 function Button({
   variant='text',
   colorSet='primary',
   children,
-  onClick=undefined
+  onClick=undefined,
+  style=undefined
 }:Props) {
   const [ch, setCh] = useState<ReactNode>(null);
 
@@ -37,7 +39,9 @@ function Button({
 
   return (
     <div className={ cx('button-container', variant, colorSet) }
-         onClick={onClick}>
+         onClick={onClick}
+         style={style}
+    >
       {ch}
     </div>
   )
