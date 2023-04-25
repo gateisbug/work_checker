@@ -7,8 +7,8 @@ import { useTranslation } from "react-i18next";
 const cx = classnames.bind(styles);
 
 type Props = {
-  value: string;
   onChange: (value: string) => void;
+  value?: string;
   padding?: string;
   placeholder?: string;
   variant?: 'outline'|'none';
@@ -18,10 +18,21 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
   const { i18n } = useTranslation();
 
   const [uuid, setUuid] = useState<string|undefined>(undefined);
-  const [state, setState] = useState<string>(value ?? '');
+  const [state, setState] = useState<string>('');
 
   const onInput = (e:ChangeEvent<HTMLInputElement>) => {
-    setState(e.target.value);
+    let returnValue = e.target.value;
+    if(returnValue.length > 4) {
+      returnValue = e.target.value.substring(0, 4);
+    }
+
+    returnValue = returnValue.replace(/[^0-9]/g, "")
+
+    if(Number(returnValue) > 2400) {
+      returnValue = '2400';
+    }
+
+    setState(returnValue);
   }
 
   useEffect(() => {
@@ -32,6 +43,10 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
     setState(value ?? '');
   }, [value])
 
+  useEffect(() => {
+    onChange(state)
+  }, [onChange, state])
+
     return (
       <div className={ cx("input-container", variant, i18n.language) }>
         <label htmlFor={uuid} className={ cx("input-box") } style={{ padding }}>
@@ -39,9 +54,10 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
                  type="text"
                  className={ cx("input-core") }
                  onInput={onInput}
-                 onChange={(e) => onChange(e.target.value)}
                  value={state}
-                 placeholder={placeholder}/>
+                 placeholder={placeholder}
+                 maxLength={4}
+          />
         </label>
       </div>
     )

@@ -1,3 +1,7 @@
 {
-  "test": "Test"
+  "arrivePlaceholder": "Input Arrive Time. e.g) 0800",
+  "breakPlaceholder": "Input Break Time. e.g) 0100",
+  "leavePlaceholder": "Input Leave Time. e.g) 1700",
+  "totalArrivePlaceholder": "Bulk change of arrival time",
+  "totalBreakPlaceholder": "Bulk change of break time"
 }

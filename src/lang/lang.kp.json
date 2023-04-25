@@ -1,3 +1,7 @@
 {
-  "test": "시험"
+  "arrivePlaceholder": "립장시기 기입. 예) 0800",
+  "breakPlaceholder": "휴게시기 기입. 예) 0100",
+  "leavePlaceholder": "퇴장시기 기입. 예) 1700",
+  "totalArrivePlaceholder": "립장시기 혁명적 기입",
+  "totalBreakPlaceholder": "휴게시기 혁명적 기입"
 }

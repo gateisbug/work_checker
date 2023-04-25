@@ -1,3 +1,7 @@
 {
-  "test": "테스트"
+  "arrivePlaceholder": "출근시간 입력. 예시) 0800",
+  "breakPlaceholder": "휴식시간 입력. 예시) 0100",
+  "leavePlaceholder": "퇴근시간 입력. 예시) 1700",
+  "totalArrivePlaceholder": "출근시간 일괄입력",
+  "totalBreakPlaceholder": "휴게시간 일괄입력"
 }
