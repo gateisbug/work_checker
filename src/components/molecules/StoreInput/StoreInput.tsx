@@ -1,4 +1,4 @@
-import React, { useCallback, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 import _ from 'lodash';
 import { useRecoilState } from "recoil";
 import { weekAtom } from "@src/stores/week";
@@ -40,6 +40,10 @@ function StoreInput({ index, type }:Props) {
     setValue(v);
     debouncedSetRecoil(v);
   }
+
+  useEffect(() => {
+    onChange(week[index][`${type}`]);
+  }, [week[index][`${type}`]])
 
   return (
     <Input value={value} onChange={onChange} placeholder={placeholder} />

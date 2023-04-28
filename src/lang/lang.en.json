@@ -3,5 +3,15 @@
   "breakPlaceholder": "Input Break Time. e.g) 0100",
   "leavePlaceholder": "Input Leave Time. e.g) 1700",
   "totalArrivePlaceholder": "Bulk change of arrival time",
-  "totalBreakPlaceholder": "Bulk change of break time"
+  "totalBreakPlaceholder": "Bulk change of break time",
+  "monday": "Mon",
+  "tuesday": "Tue",
+  "wednesday": "Wed",
+  "thursday": "Thu",
+  "friday": "Fri",
+  "date": "weekday",
+  "arrive": "Arrive",
+  "leave": "Leave",
+  "work": "Work",
+  "break": "Break"
 }

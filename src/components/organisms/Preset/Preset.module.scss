@@ -1,0 +1,13 @@
+.preset-container {
+	display: flex;
+	flex-flow: row nowrap;
+	box-sizing: border-box;
+	padding: 16px 0;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+
+	& > div {
+		flex-grow: 1;
+	}
+}

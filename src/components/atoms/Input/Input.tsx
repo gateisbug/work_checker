@@ -34,6 +34,7 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
     }
 
     setState(returnValue);
+    onChange(returnValue)
   }
 
   useEffect(() => {
@@ -44,17 +45,13 @@ function Input({ value, onChange, variant='none', placeholder, padding='8px 16px
     setState(value ?? '');
   }, [value])
 
-  useEffect(() => {
-    onChange(state)
-  }, [onChange, state])
-
     return (
       <div className={ cx("input-container", variant, i18n.language) } style={style}>
         <label htmlFor={uuid} className={ cx("input-box") } style={{ padding }}>
           <input id={uuid}
                  type="text"
                  className={ cx("input-core") }
-                 onInput={onInput}
+                 onChange={onInput}
                  value={state}
                  placeholder={placeholder}
                  maxLength={4}

@@ -6,4 +6,32 @@
 body {
   color: #e3e2e6;
   background-color: #1b1b1f;
+  height: 100vh;
+}
+
+#root {
+  height: 100%;
+}
+
+.App {
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.Page {
+  display: flex;
+  flex-flow: column nowrap;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.wrap {
+  height: 100%;
+  max-width: 1232px;
+  margin: 0 auto;
+  padding: 0 16px;
+  box-sizing: border-box;
+  border-right: 1px solid #333;
+  border-left: 1px solid #333;
 }

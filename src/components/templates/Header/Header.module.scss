@@ -1,0 +1,10 @@
+.Header {
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	height: 72px;
+	background-color: var(--color-primary-container);
+	color: var(--color-on-primary-container);
+	padding: 0 24px;
+	box-sizing: border-box;
+}
