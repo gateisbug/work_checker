@@ -30,8 +30,14 @@ body {
   height: 100%;
   max-width: 1232px;
   margin: 0 auto;
-  padding: 0 16px;
+  padding: 24px 16px 0;
   box-sizing: border-box;
   border-right: 1px solid #333;
   border-left: 1px solid #333;
+}
+
+.Control {
+  display: flex;
+  flex-flow: row nowrap;
+  gap: 32px
 }

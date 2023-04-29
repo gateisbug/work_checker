@@ -5,10 +5,12 @@ import { useRecoilState } from "recoil";
 import { weekAtom } from "@src/stores/week";
 import { useEffect, useState } from "react";
 import { strToTime, timeToStr } from "@src/lib/time";
+import { useTranslation } from "react-i18next";
 
 const cx = classnames.bind(styles);
 
 function TotalWork() {
+  const { t } = useTranslation();
   const [ week ] = useRecoilState(weekAtom);
   const [ total, setTotal ] = useState('');
 
@@ -24,7 +26,7 @@ function TotalWork() {
 
   return (
     <div className={ cx("total-container") }>
-      <Label typo='s1'>Total Works</Label>
+      <Label typo='s1'>{ t('totalworks') }</Label>
       <Label typo='h6' style={{ color: '#ffcc80' }}>{ total }</Label>
     </div>
   )

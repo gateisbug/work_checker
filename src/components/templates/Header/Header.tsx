@@ -1,23 +1,20 @@
 import classnames from 'classnames/bind';
 import styles from './Header.module.scss';
-import { Button, Label } from "@components/atoms";
-import i18next from "i18next";
+import { Label } from "@components/atoms";
+import { useTranslation } from "react-i18next";
+import { LangChoice } from "@components/molecules";
 
 const cx = classnames.bind(styles);
 
 function Header() {
-  const onClick = (lng: string) => {
-    i18next.changeLanguage(lng).then();
-  }
+  const { t } = useTranslation();
 
   return (
     <header className={ cx("Header") }>
-      <Label typo='h5'>Schedulator</Label>
-      <div style={{ width: '100%', height: '100%', flexGrow: '1' }} />
+      <Label typo='h5'>{ t('title') }</Label>
+      <div style={{  height: '100%', flexGrow: '1' }} />
       <div style={{ display: 'flex', flexFlow: 'row nowrap', width: 'fit-content' }}>
-        <Button variant='contain' onClick={() => onClick('ko')}>KO</Button>
-        <Button variant='outline' onClick={() => onClick('en')}>EN</Button>
-        <Button onClick={() => onClick('kp')}>KP</Button>
+        <LangChoice />
       </div>
     </header>
   )

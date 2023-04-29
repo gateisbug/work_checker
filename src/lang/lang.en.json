@@ -1,4 +1,5 @@
 {
+  "title": "Schedulator",
   "arrivePlaceholder": "Input Arrive Time. e.g) 0800",
   "breakPlaceholder": "Input Break Time. e.g) 0100",
   "leavePlaceholder": "Input Leave Time. e.g) 1700",
@@ -9,9 +10,12 @@
   "wednesday": "Wed",
   "thursday": "Thu",
   "friday": "Fri",
-  "date": "weekday",
+  "date": "Weekday",
   "arrive": "Arrive",
   "leave": "Leave",
   "work": "Work",
-  "break": "Break"
+  "break": "Break",
+  "totalworks": "Total Works",
+  "reset": "Reset",
+  "language": "English"
 }

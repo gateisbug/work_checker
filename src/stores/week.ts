@@ -13,11 +13,11 @@ export type WeekType = {
 export const weekAtom = atom<Array<WeekType>>({
   key: prefix('weekAtom'),
   default: [
-    { index: 0, arrive: '', break: '', leave: '', work: '' },
-    { index: 1, arrive: '', break: '', leave: '', work: '' },
-    { index: 2, arrive: '', break: '', leave: '', work: '' },
-    { index: 3, arrive: '', break: '', leave: '', work: '' },
-    { index: 4, arrive: '', break: '', leave: '', work: '' },
+    { index: 0, arrive: '', break: '', leave: '', work: '0000' },
+    { index: 1, arrive: '', break: '', leave: '', work: '0000' },
+    { index: 2, arrive: '', break: '', leave: '', work: '0000' },
+    { index: 3, arrive: '', break: '', leave: '', work: '0000' },
+    { index: 4, arrive: '', break: '', leave: '', work: '0000' },
   ]
 });
 
